@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Roboto:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: rgb(2, 2, 62);
+    color: white;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    font-size: 1.1rem;
+}
+
+nav ul{
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+}
+
+.line{
+    background-color: purple;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+.container{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 10vw) ;
+    grid-template-rows: repeat(3, 10vw);
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+.box:hover{
+    background-color: rgba(146, 182, 245, 0.236);
+    cursor: pointer;
+}
+
+.gameInfo{
+    padding: 5px 14px;
+    font-family: 'Balsamiq Sans', cursive;
+    margin-left: 50px;
+}
+
+.img img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.winner{
+    display: flex;
+    flex-direction: column;
+}
+
+.info{
+    font-size: 1.4rem;
+    justify-content: flex-start;
+    background: rgba(204, 103, 232, 0.718);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#reset{
+    width: fit-content;
+    padding: 7px;
+    margin: 12px 0px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    background: #cba9cb;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px){
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 50px;
+    }
+
+    .container{
+        display: grid;
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
